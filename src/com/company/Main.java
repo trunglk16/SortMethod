@@ -25,4 +25,8 @@ private static int [] NUMBERS =
             }
         }
     }
+    public static void SimpleSelectionSort() {
+
+    }
+
 }
