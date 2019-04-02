@@ -11,7 +11,8 @@ private static int [] NUMBERS =
 
     public static void main(String[] args) {
         BubbleSort();
-        System.out.println(Arrays.toString(NUMBERS));
+        SimpleSelectionSort();
+
     }
 
     public static void BubbleSort() {
@@ -24,9 +25,25 @@ private static int [] NUMBERS =
                 }
             }
         }
+        System.out.println("BUBBLE"+Arrays.toString(NUMBERS));
+
     }
     public static void SimpleSelectionSort() {
-
+        int position = 0;
+        for (int i = 0; i < NUMBERS.length - 1; i++) {
+            int j = i + 1;
+            position = i;
+            int temp = NUMBERS[i];
+            for (; j < NUMBERS.length - i; j++) {
+                if (NUMBERS[j] < temp) {
+                    temp = NUMBERS[j];
+                    position = j;
+                }
+            }
+            NUMBERS[position] = NUMBERS[i];
+            NUMBERS[i] = temp;
+        }
+        System.out.println("SelectSort"+Arrays.toString(NUMBERS));
     }
 
 }
